@@ -1,0 +1,52 @@
+{
+  "items": [
+    {
+      "id": "1",
+      "checked": false,
+      "isEditing": false,
+      "item": "butter cake"
+    },
+    {
+      "id": "2",
+      "checked": false,
+      "isEditing": false,
+      "item": "fish curry"
+    },
+    {
+      "id": "3",
+      "checked": false,
+      "isEditing": false,
+      "item": "egg bun"
+    },
+    {
+      "id": "4",
+      "checked": false,
+      "isEditing": false,
+      "item": "butter cake curry"
+    },
+    {
+      "id": "6",
+      "checked": false,
+      "isEditing": false,
+      "item": "cake"
+    },
+    {
+      "id": "7",
+      "checked": false,
+      "isEditing": false,
+      "item": "fish"
+    },
+    {
+      "id": "8",
+      "checked": false,
+      "isEditing": false,
+      "item": "crab"
+    },
+    {
+      "id": "9",
+      "checked": false,
+      "isEditing": false,
+      "item": "fish curry"
+    }
+  ]
+}

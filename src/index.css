@@ -1,0 +1,249 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 22px;
+}
+body {
+  min-height: 100vh;
+  font-family: 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  height: 100vh; 
+  width: 100%; 
+  max-width: 500px;
+  border: 1px solid mediumblue;
+  margin: auto;
+}
+
+header {
+
+  width: 100%;
+  padding: 0 0.25em;
+  background-color: mediumblue;
+  color: aliceblue;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+}
+main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: flex-start;
+  align-items: center;
+  overflow-y:auto;
+}
+
+footer {
+ 
+  width: 100%;
+  padding: 0.25em;
+  background-color: mediumblue;
+  color: aliceblue;
+  display: grid;
+  place-content: center;
+
+}
+
+.variant{
+  background-color: rgba(7, 7, 249, 0.427);
+  border-radius: .5rem;
+  padding: 1rem;
+}
+
+.orangeButton{
+  background-color: orange;
+}
+
+ul{
+  width: 100%;
+  list-style:none;
+padding: 0rem 0.25rem 0.25rem;
+}
+
+ul li::before{
+  content: "\200B";/*The character sequence "\200B" represents the Unicode character U+200B, which is the Unicode character for a zero-width space. The zero-width space is a non-printing character that does not have a visible width, but it can be used to control line breaks and spacing in text. It's particularly useful in situations where you want to add separation without introducing a visible space character.*/
+}
+
+.item {
+ display: flex;
+justify-content: flex-start;
+align-items: center;
+padding: 0.5rem 0 0.5rem 0.5rem;
+margin: 0.25rem 0;
+background-color: #eee;
+}
+
+.item:first-child{
+  margin: 0;
+
+}
+
+.item input[type = "checkbox"]{
+  text-align: center;
+  width: 2.5rem;
+ width: 48px; 
+ min-width: 48px;
+ height: 2.5rem;
+ min-height:48px;
+ cursor: pointer;
+ margin-right: 0.5rem;
+}
+/*+ symbol in CSS, which is used as the adjacent sibling combinator. The adjacent sibling combinator selects an element that is immediately preceded by a specified element. */
+.item input[type="checkbox"]:focus + label{
+text-decoration: underline;
+}
+
+/*The ">" symbol is often used in CSS selectors as the child combinator, selecting elements that are a direct child of another element.*/
+
+.item > label {
+  font-size: 0.75rem;
+  flex-grow: 1;
+}
+
+.item .svg_style {
+  width: 48px;
+  min-width:48px;
+  height:36px;
+  font-size: 1rem;
+  color: steelblue;
+  cursor: pointer;
+}
+
+.item .svg_style:focus,.item .svg_style:hover{
+  color: red;
+  outline: none;
+}
+
+.item .plus_btn{
+  color: mediumblue;
+ 
+}
+
+.addForm {
+  width:100%;
+  background-color: re;
+  display: flex;
+  justify-content:flex-start;
+  margin:0.5rem 0 0;
+  padding: 0 0.5rem 0.25rem;
+  border-bottom: 1px solid #eee;
+}
+
+.addForm label{
+
+ position: absolute;
+ left:-99999px;
+
+}
+
+.addForm input[type = 'text'] {
+
+flex-grow:1;
+ max-width: calc(100% - 50px); 
+  /* the overall meaning of max-width: calc(100% - 50px); is that the element will not exceed a width of 100% of its container minus 50 pixels. This is often used in responsive web design to ensure that an element scales with the width of its container but doesn't become too wide. */
+min-height:48px;
+font-size:1rem;
+padding: 0.25rem;
+border-radius:0.25rem;
+margin-right: 0.25rem;
+outline: none;
+
+}
+
+ button,.plus_btn {
+  height:48px;
+  width:48px;
+  border-radius: 0.25rem;
+  padding: 0.5rem;
+font-size: 1rem;
+background-color: aliceblue;
+color: mediumblue;
+cursor: pointer;
+display: grid;
+place-content: center;
+}
+
+.plus_btn:hover,.plus_btn:focus {
+  color: #eee;
+}
+
+
+button:focus,button:hover{
+  color: white;
+  background-color: limegreen;
+  outline:none;
+}
+
+ .item .pen_square:focus,.item .pen_square:hover{
+  color: blue;
+  outline: none;
+}
+
+.searchForm{
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  margin: 0.25rem 0 0;
+  padding:0 0.5rem 0.25rem;
+  border-bottom:1px solid #eee;
+}
+
+.searchForm label{
+  position: absolute;
+left:-99999px;
+}
+
+.searchForm input[type='text']{
+flex-grow: 1;
+max-width: 100%;
+min-height: 48px;
+font-size: 1rem;
+padding: 0.25rem;
+border-radius: 0.25rem;
+outline: none;
+}
+
+.loading{
+  margin-top: 30%;
+  font-size: 2rem;
+  animation: animate 2.5s linear infinite;
+  color: white;
+  border: 3px solid;
+  padding: 1rem;
+  border-radius: 1rem;
+  background-color:blue;
+ 
+}
+
+@keyframes animate{
+
+  0%{
+
+transform: scale(1) ;
+
+  }
+
+  50%{
+    transform: scale(.9);
+  }
+
+100%{
+  transform: scale(1) ;
+}
+
+
+} 
